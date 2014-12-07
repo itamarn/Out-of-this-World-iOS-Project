@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  TableViewController.h
 //  Out of this World
 //
 //  Created by Itamar Nakar on 07/12/14.
@@ -8,8 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface TableViewController : UITableViewController
 
+@property (strong, nonatomic) NSMutableArray *planets;
 
 @end
-
