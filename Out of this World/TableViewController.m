@@ -23,25 +23,9 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
-    self.planets = [NSMutableArray array];
+    self.planets = [NSMutableArray arrayWithArray:[AstronomicalData allKnownPlanets]];
     
-    NSString *planet1 = @"Mercury";
-    NSString *planet2 = @"Venus";
-    NSString *planet3 = @"Earth";
-    NSString *planet4 = @"Mars";
-    NSString *planet5 = @"Jupiter";
-    NSString *planet6 = @"Saturn";
-    NSString *planet7 = @"Uranus";
-    NSString *planet8 = @"Neptune";
     
-    [self.planets addObject:planet1];
-    [self.planets addObject:planet2];
-    [self.planets addObject:planet3];
-    [self.planets addObject:planet4];
-    [self.planets addObject:planet5];
-    [self.planets addObject:planet6];
-    [self.planets addObject:planet7];
-    [self.planets addObject:planet8];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -53,7 +37,7 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     // Return the number of sections.
-    return 2;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -67,14 +51,18 @@
     NSString *reuseIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseIdentifier forIndexPath:indexPath];
     
-    cell.textLabel.text = [self.planets objectAtIndex:indexPath.row];
+    self.planetDictionary = [self.planets objectAtIndex:indexPath.row];
+    
+    
+    cell.textLabel.text = [self.planetDictionary objectForKey:PLANET_NAME];
+    cell.imageView.image = [self.planetDictionary objectForKey:PLANET_IMAGE];
     
     
     
     if (indexPath.section == 0) {
-        cell.backgroundColor = [UIColor redColor];
+        cell.backgroundColor = [UIColor whiteColor];
     } else {
-         cell.backgroundColor = [UIColor whiteColor];
+         cell.backgroundColor = [UIColor redColor];
     }
     return cell;
 }

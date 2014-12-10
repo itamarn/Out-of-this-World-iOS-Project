@@ -7,9 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AstronomicalData.h"
 
 @interface TableViewController : UITableViewController
 
 @property (strong, nonatomic) NSMutableArray *planets;
+@property (strong, nonatomic) NSMutableDictionary *planetDictionary;
+
+
 
 @end

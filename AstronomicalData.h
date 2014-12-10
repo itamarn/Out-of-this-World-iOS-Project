@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 #define PLANET_NAME @"Planet Name"
 #define PLANET_GRAVITY @"Acelleration of Gravity at Surface"
