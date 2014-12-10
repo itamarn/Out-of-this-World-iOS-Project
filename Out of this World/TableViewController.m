@@ -23,7 +23,17 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
-    self.planets = [NSMutableArray arrayWithArray:[AstronomicalData allKnownPlanets]];
+    
+    
+    self.planets = [NSMutableArray array];
+    for (NSDictionary *planetDictionary in [AstronomicalData allKnownPlanets]) {
+        
+        NSString *imageName = [NSString stringWithFormat:@"%@.jpg", planetDictionary[PLANET_NAME]];
+        planetFactory *planet = [[planetFactory alloc] initWithDictionary:planetDictionary andImage:[UIImage imageNamed:imageName]];
+        [self.planets addObject:planet];
+    }
+    
+    // = [NSMutableArray arrayWithArray:[AstronomicalData allKnownPlanets]];
     
     
 }
@@ -51,19 +61,17 @@
     NSString *reuseIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseIdentifier forIndexPath:indexPath];
     
-    self.planetDictionary = [self.planets objectAtIndex:indexPath.row];
+    planetFactory *cellPlanet = self.planets[indexPath.row];
+    
+    cell.textLabel.text = cellPlanet.name;
+    cell.detailTextLabel.text = cellPlanet.nickname;
+    cell.imageView.image = cellPlanet.image;
+    
+    cell.backgroundColor = [UIColor clearColor];
+    cell.textLabel.textColor = [UIColor whiteColor];
+    cell.detailTextLabel.textColor = [UIColor colorWithWhite:1.0 alpha:0.5];
     
     
-    cell.textLabel.text = [self.planetDictionary objectForKey:PLANET_NAME];
-    cell.imageView.image = [self.planetDictionary objectForKey:PLANET_IMAGE];
-    
-    
-    
-    if (indexPath.section == 0) {
-        cell.backgroundColor = [UIColor whiteColor];
-    } else {
-         cell.backgroundColor = [UIColor redColor];
-    }
     return cell;
 }
 

@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "AstronomicalData.h"
+#import "planetFactory.h"
 
 @interface TableViewController : UITableViewController
 
