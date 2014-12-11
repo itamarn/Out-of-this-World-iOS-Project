@@ -26,6 +26,8 @@
 		CEF970111A34C67E00D58B09 /* Uranus.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CEF970071A34C67E00D58B09 /* Uranus.jpg */; };
 		CEF970121A34C67E00D58B09 /* Venus.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CEF970081A34C67E00D58B09 /* Venus.jpg */; };
 		CEF970151A34C87500D58B09 /* planetFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = CEF970141A34C87500D58B09 /* planetFactory.m */; };
+		CEF970511A386F3B00D58B09 /* PlanetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEF970501A386F3B00D58B09 /* PlanetViewController.m */; };
+		CEF9708B1A398FD200D58B09 /* DetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEF9708A1A398FD200D58B09 /* DetailTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +68,10 @@
 		CEF970081A34C67E00D58B09 /* Venus.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Venus.jpg; sourceTree = "<group>"; };
 		CEF970131A34C87500D58B09 /* planetFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = planetFactory.h; sourceTree = "<group>"; };
 		CEF970141A34C87500D58B09 /* planetFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = planetFactory.m; sourceTree = "<group>"; };
+		CEF9704F1A386F3B00D58B09 /* PlanetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlanetViewController.h; sourceTree = "<group>"; };
+		CEF970501A386F3B00D58B09 /* PlanetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlanetViewController.m; sourceTree = "<group>"; };
+		CEF970891A398FD200D58B09 /* DetailTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailTableViewController.h; sourceTree = "<group>"; };
+		CEF9708A1A398FD200D58B09 /* DetailTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,10 +118,11 @@
 				CE168B1B1A3469120069F517 /* Main.storyboard */,
 				CE168B371A346A370069F517 /* TableViewController.h */,
 				CE168B381A346A370069F517 /* TableViewController.m */,
-				CEF970131A34C87500D58B09 /* planetFactory.h */,
-				CEF970141A34C87500D58B09 /* planetFactory.m */,
-				CEF96FC71A348DE200D58B09 /* AstronomicalData.h */,
-				CEF96FC81A348DE200D58B09 /* AstronomicalData.m */,
+				CEF9704F1A386F3B00D58B09 /* PlanetViewController.h */,
+				CEF970501A386F3B00D58B09 /* PlanetViewController.m */,
+				CEF970891A398FD200D58B09 /* DetailTableViewController.h */,
+				CEF9708A1A398FD200D58B09 /* DetailTableViewController.m */,
+				CEF970521A386F4800D58B09 /* Planet Model */,
 				CE168B1E1A3469120069F517 /* Images.xcassets */,
 				CE168B201A3469120069F517 /* LaunchScreen.xib */,
 				CE168B111A3469120069F517 /* Supporting Files */,
@@ -157,6 +164,17 @@
 				CE168B2C1A3469120069F517 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CEF970521A386F4800D58B09 /* Planet Model */ = {
+			isa = PBXGroup;
+			children = (
+				CEF970131A34C87500D58B09 /* planetFactory.h */,
+				CEF970141A34C87500D58B09 /* planetFactory.m */,
+				CEF96FC71A348DE200D58B09 /* AstronomicalData.h */,
+				CEF96FC81A348DE200D58B09 /* AstronomicalData.m */,
+			);
+			name = "Planet Model";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -271,8 +289,10 @@
 			files = (
 				CE168B171A3469120069F517 /* AppDelegate.m in Sources */,
 				CE168B141A3469120069F517 /* main.m in Sources */,
+				CEF9708B1A398FD200D58B09 /* DetailTableViewController.m in Sources */,
 				CE168B391A346A370069F517 /* TableViewController.m in Sources */,
 				CEF970151A34C87500D58B09 /* planetFactory.m in Sources */,
+				CEF970511A386F3B00D58B09 /* PlanetViewController.m in Sources */,
 				CEF96FC91A348DE200D58B09 /* AstronomicalData.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

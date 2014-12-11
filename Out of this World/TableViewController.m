@@ -7,6 +7,8 @@
 //
 
 #import "TableViewController.h"
+#import "PlanetViewController.h"
+#import "DetailTableViewController.h"
 
 @interface TableViewController ()
 
@@ -76,48 +78,56 @@
 }
 
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
 #pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    
+    if ([segue.identifier isEqualToString:@"Planet Image Segue"]) {
+        
+        if ([sender isKindOfClass:[UITableViewCell class]]) {
+            
+            if ([segue.destinationViewController isKindOfClass:[PlanetViewController class]]) {
+            
+            PlanetViewController* nextViewController = segue.destinationViewController;
+            
+            NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
+            
+            planetFactory *selectedPlanet = self.planets[indexPath.row];
+            nextViewController.planet = selectedPlanet;
+            }
+        }
+    }
+    if ([segue.identifier isEqualToString:@"Planet Details Segue"]) {
+        
+         if ([sender isKindOfClass:[NSIndexPath class]]) {
+             
+             if ([segue.destinationViewController isKindOfClass:[DetailTableViewController class]]) {
+                 
+                 DetailTableViewController* nextViewController = segue.destinationViewController;
+                 
+                 NSIndexPath *indexPath = sender;
+                 
+                 planetFactory *selectedPlanet = self.planets[indexPath.row];
+                 nextViewController.planet = selectedPlanet;
+             }
+         }
+    }
 }
-*/
 
+
+-(void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath
+{
+    [self performSegueWithIdentifier:@"Planet Details Segue" sender:indexPath];
+}
 @end
+
+
+
+
+
+
+
+
+
+
