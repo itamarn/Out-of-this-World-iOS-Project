@@ -44,7 +44,13 @@
                             <outlet property="delegate" destination="3Nc-yE-Jor" id="hQa-EM-Ki9"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Planets" id="3zl-Ez-5gi"/>
+                    <navigationItem key="navigationItem" title="Planets" id="3zl-Ez-5gi">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="o6e-a5-Kd6">
+                            <connections>
+                                <segue destination="qkV-Wf-Ghx" kind="modal" id="LFe-gd-tA3"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <segue destination="gg6-6S-YY1" kind="push" identifier="Planet Details Segue" id="2iS-zk-e3b"/>
                     </connections>
@@ -105,7 +111,94 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bXP-eF-49Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="946" y="708"/>
+            <point key="canvasLocation" x="944" y="362"/>
+        </scene>
+        <!--Add Planet Object View Controller-->
+        <scene sceneID="M5s-27-Mhm">
+            <objects>
+                <viewController id="qkV-Wf-Ghx" customClass="AddPlanetObjectViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IFx-zd-XTk">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="name" minimumFontSize="17" id="nNx-kd-HyE">
+                                <rect key="frame" x="31" y="38" width="258" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="nickname" minimumFontSize="17" id="gdw-MM-D1h">
+                                <rect key="frame" x="31" y="76" width="258" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="temperture" minimumFontSize="17" id="BkJ-Js-N7H">
+                                <rect key="frame" x="31" y="114" width="258" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="diameter" minimumFontSize="17" id="PB3-Im-oTJ">
+                                <rect key="frame" x="31" y="152" width="258" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="year length" minimumFontSize="17" id="qAg-gy-mV6">
+                                <rect key="frame" x="31" y="190" width="258" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="number of moons" minimumFontSize="17" id="bng-je-uNX">
+                                <rect key="frame" x="31" y="228" width="258" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="oiw-nZ-6GP">
+                                <rect key="frame" x="31" y="275" width="87" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.5" green="0.0" blue="0.072518531580000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="cancelButtonPressed:" destination="qkV-Wf-Ghx" eventType="touchUpInside" id="Ohg-Sv-Cyl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="NBh-W6-0Pe">
+                                <rect key="frame" x="210" y="275" width="79" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.57647058823529407" blue="0.39061330699334584" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="Add">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="addButtonPressed:" destination="qkV-Wf-Ghx" eventType="touchUpInside" id="FUc-ab-ejb"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Jc3-6I-JaB"/>
+                    <connections>
+                        <outlet property="diameterTextField" destination="PB3-Im-oTJ" id="cu9-X2-n3b"/>
+                        <outlet property="moonsNumberTextField" destination="bng-je-uNX" id="je5-HI-JqS"/>
+                        <outlet property="nameTextField" destination="nNx-kd-HyE" id="yFZ-3w-F9A"/>
+                        <outlet property="nicknameTextField" destination="gdw-MM-D1h" id="UPq-U0-k1Q"/>
+                        <outlet property="tempertureTextField" destination="BkJ-Js-N7H" id="KeV-KV-8Uk"/>
+                        <outlet property="yearLengthTextField" destination="qAg-gy-mV6" id="RWs-99-Jdg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gwM-pm-Bus" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="944" y="1079"/>
         </scene>
         <!--Planet View Controller-->
         <scene sceneID="z0b-kX-fuQ">
@@ -143,7 +236,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mJH-Xg-H0I" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="946" y="62"/>
+            <point key="canvasLocation" x="944" y="-314"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Juy-Ma-X9J">
@@ -171,6 +264,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="6yf-jY-q0K"/>
+        <segue reference="2iS-zk-e3b"/>
     </inferredMetricsTieBreakers>
 </document>

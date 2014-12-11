@@ -28,6 +28,7 @@
 		CEF970151A34C87500D58B09 /* planetFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = CEF970141A34C87500D58B09 /* planetFactory.m */; };
 		CEF970511A386F3B00D58B09 /* PlanetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEF970501A386F3B00D58B09 /* PlanetViewController.m */; };
 		CEF9708B1A398FD200D58B09 /* DetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEF9708A1A398FD200D58B09 /* DetailTableViewController.m */; };
+		CEF970971A3A33B700D58B09 /* AddPlanetObjectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEF970961A3A33B700D58B09 /* AddPlanetObjectViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +73,8 @@
 		CEF970501A386F3B00D58B09 /* PlanetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlanetViewController.m; sourceTree = "<group>"; };
 		CEF970891A398FD200D58B09 /* DetailTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailTableViewController.h; sourceTree = "<group>"; };
 		CEF9708A1A398FD200D58B09 /* DetailTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailTableViewController.m; sourceTree = "<group>"; };
+		CEF970951A3A33B700D58B09 /* AddPlanetObjectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddPlanetObjectViewController.h; sourceTree = "<group>"; };
+		CEF970961A3A33B700D58B09 /* AddPlanetObjectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddPlanetObjectViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +125,8 @@
 				CEF970501A386F3B00D58B09 /* PlanetViewController.m */,
 				CEF970891A398FD200D58B09 /* DetailTableViewController.h */,
 				CEF9708A1A398FD200D58B09 /* DetailTableViewController.m */,
+				CEF970951A3A33B700D58B09 /* AddPlanetObjectViewController.h */,
+				CEF970961A3A33B700D58B09 /* AddPlanetObjectViewController.m */,
 				CEF970521A386F4800D58B09 /* Planet Model */,
 				CE168B1E1A3469120069F517 /* Images.xcassets */,
 				CE168B201A3469120069F517 /* LaunchScreen.xib */,
@@ -292,6 +297,7 @@
 				CEF9708B1A398FD200D58B09 /* DetailTableViewController.m in Sources */,
 				CE168B391A346A370069F517 /* TableViewController.m in Sources */,
 				CEF970151A34C87500D58B09 /* planetFactory.m in Sources */,
+				CEF970971A3A33B700D58B09 /* AddPlanetObjectViewController.m in Sources */,
 				CEF970511A386F3B00D58B09 /* PlanetViewController.m in Sources */,
 				CEF96FC91A348DE200D58B09 /* AstronomicalData.m in Sources */,
 			);

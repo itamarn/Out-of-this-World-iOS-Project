@@ -120,6 +120,21 @@
 {
     [self performSegueWithIdentifier:@"Planet Details Segue" sender:indexPath];
 }
+
+#pragma mark - AddPlanetObjectViewController Delegate
+
+-(void) didCancel
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+    NSLog(@"didCancel");
+}
+
+-(void)addPlanetObject
+{
+    [self dismissViewControllerAnimated:YES completion:nil];    
+    NSLog(@"addPlanetObject");
+}
+
 @end
 
 

@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "planetFactory.h"
+#import "AddPlanetObjectViewController.h"
 
-@interface TableViewController : UITableViewController
+@interface TableViewController : UITableViewController <AddPlanetObjectViewControllerDelegate>
 
 @property (strong, nonatomic) NSMutableArray *planets;
 @property (strong, nonatomic) NSMutableDictionary *planetDictionary;
