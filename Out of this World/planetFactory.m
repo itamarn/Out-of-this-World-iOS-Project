@@ -6,9 +6,9 @@
 //  Copyright (c) 2014 Itamar Nakar. All rights reserved.
 //
 
-#import "planetFactory.h"
+#import "PlanetFactory.h"
 
-@implementation planetFactory
+@implementation PlanetFactory
 
 
 -(id)initWithDictionary:(NSDictionary *)data andImage:(UIImage *)image

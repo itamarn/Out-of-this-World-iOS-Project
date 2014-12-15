@@ -12,5 +12,5 @@
 @interface DetailTableViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 @property (strong, nonatomic) IBOutlet UITableView *detailTable;
 
-@property (strong, nonatomic) planetFactory *planet;
+@property (strong, nonatomic) PlanetFactory *planet;
 @end

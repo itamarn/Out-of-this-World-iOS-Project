@@ -11,7 +11,7 @@
 
 @interface PlanetViewController : UIViewController <UIScrollViewDelegate>
 
-@property (nonatomic, strong) planetFactory *planet;
+@property (nonatomic, strong) PlanetFactory *planet;
 @property (nonatomic, strong) UIImageView *planetImageView;
 @property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
 

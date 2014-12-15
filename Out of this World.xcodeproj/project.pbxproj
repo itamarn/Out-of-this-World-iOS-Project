@@ -14,6 +14,7 @@
 		CE168B221A3469120069F517 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE168B201A3469120069F517 /* LaunchScreen.xib */; };
 		CE168B2E1A3469120069F517 /* Out_of_this_WorldTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE168B2D1A3469120069F517 /* Out_of_this_WorldTests.m */; };
 		CE168B391A346A370069F517 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE168B381A346A370069F517 /* TableViewController.m */; };
+		CEDF03631A3DEC12000BB5DB /* DeleteTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CEDF03621A3DEC12000BB5DB /* DeleteTVC.m */; };
 		CEF96FC91A348DE200D58B09 /* AstronomicalData.m in Sources */ = {isa = PBXBuildFile; fileRef = CEF96FC81A348DE200D58B09 /* AstronomicalData.m */; };
 		CEF970091A34C67E00D58B09 /* Earth.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CEF96FFF1A34C67E00D58B09 /* Earth.jpg */; };
 		CEF9700A1A34C67E00D58B09 /* EinsteinRing.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CEF970001A34C67E00D58B09 /* EinsteinRing.jpg */; };
@@ -25,7 +26,7 @@
 		CEF970101A34C67E00D58B09 /* Saturn.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CEF970061A34C67E00D58B09 /* Saturn.jpg */; };
 		CEF970111A34C67E00D58B09 /* Uranus.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CEF970071A34C67E00D58B09 /* Uranus.jpg */; };
 		CEF970121A34C67E00D58B09 /* Venus.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CEF970081A34C67E00D58B09 /* Venus.jpg */; };
-		CEF970151A34C87500D58B09 /* planetFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = CEF970141A34C87500D58B09 /* planetFactory.m */; };
+		CEF970151A34C87500D58B09 /* PlanetFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = CEF970141A34C87500D58B09 /* PlanetFactory.m */; };
 		CEF970511A386F3B00D58B09 /* PlanetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEF970501A386F3B00D58B09 /* PlanetViewController.m */; };
 		CEF9708B1A398FD200D58B09 /* DetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEF9708A1A398FD200D58B09 /* DetailTableViewController.m */; };
 		CEF970971A3A33B700D58B09 /* AddPlanetObjectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEF970961A3A33B700D58B09 /* AddPlanetObjectViewController.m */; };
@@ -55,6 +56,8 @@
 		CE168B2D1A3469120069F517 /* Out_of_this_WorldTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Out_of_this_WorldTests.m; sourceTree = "<group>"; };
 		CE168B371A346A370069F517 /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
 		CE168B381A346A370069F517 /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
+		CEDF03611A3DEC12000BB5DB /* DeleteTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeleteTVC.h; sourceTree = "<group>"; };
+		CEDF03621A3DEC12000BB5DB /* DeleteTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeleteTVC.m; sourceTree = "<group>"; };
 		CEF96FC71A348DE200D58B09 /* AstronomicalData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AstronomicalData.h; path = ../AstronomicalData.h; sourceTree = "<group>"; };
 		CEF96FC81A348DE200D58B09 /* AstronomicalData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AstronomicalData.m; path = ../AstronomicalData.m; sourceTree = "<group>"; };
 		CEF96FFF1A34C67E00D58B09 /* Earth.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Earth.jpg; sourceTree = "<group>"; };
@@ -67,8 +70,8 @@
 		CEF970061A34C67E00D58B09 /* Saturn.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Saturn.jpg; sourceTree = "<group>"; };
 		CEF970071A34C67E00D58B09 /* Uranus.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Uranus.jpg; sourceTree = "<group>"; };
 		CEF970081A34C67E00D58B09 /* Venus.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Venus.jpg; sourceTree = "<group>"; };
-		CEF970131A34C87500D58B09 /* planetFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = planetFactory.h; sourceTree = "<group>"; };
-		CEF970141A34C87500D58B09 /* planetFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = planetFactory.m; sourceTree = "<group>"; };
+		CEF970131A34C87500D58B09 /* PlanetFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlanetFactory.h; sourceTree = "<group>"; };
+		CEF970141A34C87500D58B09 /* PlanetFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlanetFactory.m; sourceTree = "<group>"; };
 		CEF9704F1A386F3B00D58B09 /* PlanetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlanetViewController.h; sourceTree = "<group>"; };
 		CEF970501A386F3B00D58B09 /* PlanetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlanetViewController.m; sourceTree = "<group>"; };
 		CEF970891A398FD200D58B09 /* DetailTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailTableViewController.h; sourceTree = "<group>"; };
@@ -98,6 +101,8 @@
 		CE168B051A3469120069F517 = {
 			isa = PBXGroup;
 			children = (
+				CEDF03611A3DEC12000BB5DB /* DeleteTVC.h */,
+				CEDF03621A3DEC12000BB5DB /* DeleteTVC.m */,
 				CE168B101A3469120069F517 /* Out of this World */,
 				CE168B2A1A3469120069F517 /* Out of this WorldTests */,
 				CE168B0F1A3469120069F517 /* Products */,
@@ -174,8 +179,8 @@
 		CEF970521A386F4800D58B09 /* Planet Model */ = {
 			isa = PBXGroup;
 			children = (
-				CEF970131A34C87500D58B09 /* planetFactory.h */,
-				CEF970141A34C87500D58B09 /* planetFactory.m */,
+				CEF970131A34C87500D58B09 /* PlanetFactory.h */,
+				CEF970141A34C87500D58B09 /* PlanetFactory.m */,
 				CEF96FC71A348DE200D58B09 /* AstronomicalData.h */,
 				CEF96FC81A348DE200D58B09 /* AstronomicalData.m */,
 			);
@@ -296,7 +301,8 @@
 				CE168B141A3469120069F517 /* main.m in Sources */,
 				CEF9708B1A398FD200D58B09 /* DetailTableViewController.m in Sources */,
 				CE168B391A346A370069F517 /* TableViewController.m in Sources */,
-				CEF970151A34C87500D58B09 /* planetFactory.m in Sources */,
+				CEF970151A34C87500D58B09 /* PlanetFactory.m in Sources */,
+				CEDF03631A3DEC12000BB5DB /* DeleteTVC.m in Sources */,
 				CEF970971A3A33B700D58B09 /* AddPlanetObjectViewController.m in Sources */,
 				CEF970511A386F3B00D58B09 /* PlanetViewController.m in Sources */,
 				CEF96FC91A348DE200D58B09 /* AstronomicalData.m in Sources */,

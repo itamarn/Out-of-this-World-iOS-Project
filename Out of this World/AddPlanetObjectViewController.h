@@ -7,15 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PlanetFactory.h"
 
 @protocol AddPlanetObjectViewControllerDelegate <NSObject>
 
 -(void)didCancel;
--(void)addPlanetObject;
+-(void)addPlanetObject:(PlanetFactory *)planetObject;
 
 @end
 
-@interface AddPlanetObjectViewController : UIViewController
+@interface AddPlanetObjectViewController : UIViewController <UITextFieldDelegate>
 
 @property (weak, nonatomic) id <AddPlanetObjectViewControllerDelegate> delegate;
 

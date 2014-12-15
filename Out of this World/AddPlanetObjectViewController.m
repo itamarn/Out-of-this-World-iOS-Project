@@ -8,6 +8,7 @@
 
 #import "AddPlanetObjectViewController.h"
 
+
 @interface AddPlanetObjectViewController ()
 
 @end
@@ -17,6 +18,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.nameTextField.delegate = self;
+    self.nicknameTextField.delegate = self;
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"Orion.jpg"]];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -39,7 +43,24 @@
 }
 
 - (IBAction)addButtonPressed:(UIButton *)sender {
-    [self.delegate addPlanetObject];
+    PlanetFactory *planetObject = [self planetCreator];
+    [self.delegate addPlanetObject:(PlanetFactory *)planetObject];
+}
+
+-(PlanetFactory *)planetCreator
+{
+    PlanetFactory *planetObject = [[PlanetFactory alloc] init];
+    planetObject.name =self.nameTextField.text;
+    planetObject.nickname =self.nicknameTextField.text;
+    planetObject.interestingFact = @"";
+    planetObject.image = [UIImage imageNamed:@"EinsteinRing.jpg"];
+    
+    return planetObject;
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField{
+    [textField resignFirstResponder];
+    return YES;
 }
 
 @end

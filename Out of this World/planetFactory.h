@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "AstronomicalData.h"
 
-@interface planetFactory : NSObject
+@interface PlanetFactory : NSObject
 
 @property (strong, nonatomic) NSString *name;
 @property (nonatomic) float gravity;
